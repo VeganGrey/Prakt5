@@ -34,7 +34,7 @@ namespace Prakt5
             else Itog.Text = "Числа не равны";
         }
 
-        private void Proizv(object sender, RoutedEventArgs e)
+        private void Proizv(object sender, RoutedEventArgs e) //Проба
         {
             Int32.TryParse(pair1.Text, out int p1);Int32.TryParse(pair2.Text, out int p2);
             rn.Pair1 = p1;rn.Pair2 = p2;
