@@ -14,6 +14,7 @@
                 <MenuItem Header="Вычит дв пар" Click="Otric"></MenuItem>
                 <MenuItem Header="Вычит тр пары" Click="TriPari"></MenuItem>
             </MenuItem>
+            <MenuItem Header="Очистка" Click="Clear"></MenuItem>
             <MenuItem Header="Справка" Click="Spravka"></MenuItem>
             <MenuItem Header="Выход" Click="Quit"></MenuItem>
         </Menu>

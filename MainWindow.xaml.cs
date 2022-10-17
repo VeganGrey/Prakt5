@@ -76,5 +76,16 @@ namespace Prakt5
         {
             Close();
         }
+
+        private void Clear(object sender, RoutedEventArgs e)
+        {
+            Itog.Clear();
+            pair1.Clear();
+            pair2.Clear();
+            pair3.Clear();
+            pair4.Clear();
+            pair5.Clear();
+            pair6.Clear();
+        }
     }
 }
