@@ -17,40 +17,25 @@ namespace Prakt5
         public int Pair5 { get { return _pair5; } set { _pair5 = value; } }
         public int Pair6 { get { return _pair6; } set { _pair6 = value; } }
 
-        public bool Prov(int p1,int p2)
+        public bool Prov()
         {
-            _pair1 = p1;
-            _pair2 = p2;
-            if (_pair1 == _pair2)
-            {
-                return true;
-            }
-            else return false;
+            return _pair1 == _pair2;
         }
 
-        public int Peremnozh(int p1, int p2)
+        public int Peremnozh()
         {
-            _pair1 = p1;
-            _pair2 = p2;
-            int Proizv = 0;
-            Proizv = _pair1* _pair2;
-            return Proizv;
+            return _pair1 * _pair2;
         }
 
-        public void Vichit(int p3,int p4,out int dop1,out int dop2)
+        public void Vichit(out int dop1,out int dop2)
         {
-            _pair3 = p3;
-            _pair4 = p4;
             dop1 = _pair1 - _pair3;
             dop2 = _pair2 - _pair4;
         }
 
-        public void Vichit(int p3, int p4,int p5,int p6,out int dop1, out int dop2)
+        public void Vichit(int p5,int p6,out int dop1, out int dop2)
         {
-            _pair3 = p3;
-            _pair4 = p4;
-            _pair5 = p5;
-            _pair6 = p6;
+            _pair5 = p5; _pair6 = p6;
             dop1 = _pair1 - _pair3 - _pair5;
             dop2 = _pair2 - _pair4 - _pair6;
         }
