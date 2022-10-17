@@ -20,7 +20,9 @@ namespace Prakt5
     /// </summary>
     public partial class MainWindow : Window
     {
-        Pair rn = new Pair();
+        Pair para = new Pair();
+        Pair para2 = new Pair();
+        Pair para3 = new Pair();
         public MainWindow()
         {
             InitializeComponent();
@@ -29,36 +31,37 @@ namespace Prakt5
         private void Proverka(object sender, RoutedEventArgs e)
         {
             Int32.TryParse(pair1.Text, out int p1);Int32.TryParse(pair2.Text, out int p2);
-            rn.Pair1 = p1;rn.Pair2 = p2;
-            if (rn.Prov()) Itog.Text = "Числа равны";
+            para.Pair1 = p1;para.Pair2 = p2;
+            if (para.Prov()) Itog.Text = "Числа равны";
             else Itog.Text = "Числа не равны";
         }
 
         private void Proizv(object sender, RoutedEventArgs e) //Проба
         {
             Int32.TryParse(pair1.Text, out int p1);Int32.TryParse(pair2.Text, out int p2);
-            rn.Pair1 = p1;rn.Pair2 = p2;
-            Itog.Text = Convert.ToString(rn.Peremnozh());
+            para.Pair1 = p1;para.Pair2 = p2;
+            Itog.Text = Convert.ToString(para.Peremnozh());
         }
 
         private void Otric(object sender, RoutedEventArgs e)
         {
             Int32.TryParse(pair1.Text, out int p1);Int32.TryParse(pair2.Text, out int p2);
-            rn.Pair1 = p1;rn.Pair2 = p2;
+            para.Pair1 = p1;para.Pair2 = p2;
             Int32.TryParse(pair3.Text, out int p3);Int32.TryParse(pair4.Text, out int p4);
-            rn.Pair3 = p3;rn.Pair4 = p4;
-            rn.Vichit(out int paraNov1,out int paraNov2);
+            para2.Pair1 = p3;para2.Pair2 = p4;
+            para.Vichit(para2,out int paraNov1,out int paraNov2);
             Itog.Text = Convert.ToString($"{paraNov1};{paraNov2}");
         }
 
         private void TriPari(object sender, RoutedEventArgs e)
         {
             Int32.TryParse(pair1.Text, out int p1);Int32.TryParse(pair2.Text, out int p2);
-            rn.Pair1 = p1; rn.Pair2 = p2;
+            para.Pair1 = p1; para.Pair2 = p2;
             Int32.TryParse(pair3.Text, out int p3);Int32.TryParse(pair4.Text, out int p4);
-            rn.Pair3 = p3; rn.Pair4 = p4;
+            para2.Pair1 = p3; para2.Pair2 = p4;
             Int32.TryParse(pair5.Text, out int p5);Int32.TryParse(pair6.Text, out int p6);
-            rn.Vichit(p5,p6,out int paraNov1, out int paraNov2);
+            para3.Pair1 = p5; para3.Pair2 = p6;
+            para.Vichit(para2,para3,out int paraNov1, out int paraNov2);
             Itog.Text = Convert.ToString($"{paraNov1};{paraNov2}");
         }
 
