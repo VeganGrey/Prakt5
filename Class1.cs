@@ -11,8 +11,9 @@ namespace Prakt5
         /// <summary>
         /// Класс для пар чисел и операций сравнения и вычитания
         /// </summary>
-        public int Pair1 { get; set; }
-        public int Pair2 { get; set; }
+        private int _pair1, _pair2;
+        public int Pair1 { get { return _pair1; } set { _pair1 = value; } }
+        public int Pair2 { get { return _pair2; } set { _pair2 = value; } }
         /// <summary>
         /// Метод для Проверки чисел первой пары на равенство
         /// </summary>
@@ -57,7 +58,7 @@ namespace Prakt5
         public void Vichit(Pair value1,Pair value2,out int dop1, out int dop2)
         {
             dop1 = Pair1 - value1.Pair1 - value2.Pair1;
-            dop2 = Pair2 - value1.Pair1 - value2.Pair2;
+            dop2 = Pair2 - value1.Pair2 - value2.Pair2;
         }
     }
 }
