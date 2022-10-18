@@ -57,7 +57,7 @@ namespace Prakt5
         public void Vichit(Pair value1,Pair value2,out int dop1, out int dop2)
         {
             dop1 = Pair1 - value1.Pair1 - value2.Pair1;
-            dop2 = Pair2 - value1.Pair1 - value2.Pair2;
+            dop2 = Pair2 - value1.Pair2 - value2.Pair2;
         }
     }
 }
